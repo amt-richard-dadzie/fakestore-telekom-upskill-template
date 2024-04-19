@@ -1,0 +1,25 @@
+<main>
+  <div class="right-background">Hello</div>
+  <div class="input-container">
+    <h1>Log in to your account</h1>
+    <form class="content" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <app-input-field label="Username">
+        <input
+          type="text"
+          placeholder="Please enter your username"
+          formControlName="username"
+          class="input_field"
+        />
+      </app-input-field>
+      <app-input-field label="Password">
+        <input
+          type="password"
+          placeholder="Please enter your password"
+          formControlName="password"
+          class="input_field"
+        />
+      </app-input-field>
+      <button type="submit" class="btn-submit">Continue</button>
+    </form>
+  </div>
+</main>
