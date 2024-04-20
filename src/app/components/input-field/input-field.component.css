@@ -1,0 +1,17 @@
+.form_field {
+  margin-top: 1em;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.7em;
+}
+
+.input_field {
+  padding: 1.3em 0.5em;
+  outline: none;
+  border: 1px solid #c8c8c8;
+  width: 90%;
+  border-radius: 8px;
+  background-color: transparent;
+}
