@@ -1,0 +1,9 @@
+<div class="product_header">
+  <h1>Store Products</h1>
+  <p>Find the best products on the market</p>
+</div>
+<div class="products_container" *ngIf="products$ | async as products">
+  <ng-container *ngFor="let product of products; ">
+    <app-product-card [product]="product"></app-product-card>
+  </ng-container>
+</div>
