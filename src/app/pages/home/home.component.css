@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7em 0.6em;
+}
+
+.avatar {
+  width: 35px;
+  border-radius: 50%;
+  background-color: #1e1e1e;
+  height: 35px;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropDown {
+  position: absolute;
+  cursor: pointer;
+  top: 40px;
+  right: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+.cart_flex {
+  display: flex;
+  gap: 70px;
+}
