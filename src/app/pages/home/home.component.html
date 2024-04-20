@@ -1,0 +1,30 @@
+<main>
+  <header>
+    <input
+      type="text"
+      placeholder="Search for Product"
+      (keyup)="onSearchInput($event)"
+    />
+    <div class="cart_flex">
+      <app-cart></app-cart>
+      <div
+        class="avatar"
+        (click)="toggleLogoutPopUp()"
+        (keydown)="toggleLogoutPopUp()"
+        tabindex="0"
+      ></div>
+    </div>
+    <div
+      class="dropDown hidden"
+      #dropDown
+      (click)="logOut()"
+      (keydown)="logOut()"
+      tabindex="0"
+    >
+      <p>LogOut</p>
+    </div>
+  </header>
+  <div>
+    <router-outlet />
+  </div>
+</main>
