@@ -1,0 +1,27 @@
+<section *ngIf="product$ | async as product">
+  <div class="product_detail">
+    <div class="product_detail_image">
+      <img [src]="product.image" alt="" />
+    </div>
+    <div class="product_detail_text_container">
+      <div>
+        <div>
+          <p>{{ product.title }}</p>
+          <p>{{ product.price | currency : 'EUR' }}</p>
+        </div>
+        <p class="product_detail_description">{{ product.description }}</p>
+      </div>
+      <div class="product_add_cart_container">
+        <div class="product_detail_quantity">
+          <p class="quantity decrease" (click)="onQuantityDecrease()" (keyup)="onQuantityDecrease()" tabindex="0">-</p>
+          <p class="quantity_value">{{ quantity }}</p>
+          <p class="quantity increase" (click)="onQuantityIncrease()" (keyup)="onQuantityIncrease()" tabindex="0">+</p>
+        </div>
+        <button class="cart_btn" (click)="onAddToCart(product)">
+          Add to Cart
+        </button>
+      </div>
+      <p>Category: {{ product.category }}</p>
+    </div>
+  </div>
+</section>

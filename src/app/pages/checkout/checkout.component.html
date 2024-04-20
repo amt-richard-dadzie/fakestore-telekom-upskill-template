@@ -1,0 +1,41 @@
+<div class="shopping_cart_container">
+  <div class="cart_header">
+    <h3>Shopping Cart</h3>
+    <p>{{ cart.totalQuantity }} Items</p>
+  </div>
+  <div class="cart_table_wrapper">
+    <table class="cart_table">
+      <thead>
+        <tr>
+          <th scope="col" class="th-padding">Product Details</th>
+          <th scope="col" class="th-padding">Quantity</th>
+          <th scope="col" class="th-padding">Price</th>
+          <th scope="col" class="th-padding">Total</th>
+          <th scope="col" class="th-padding">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of cart.items; " class="cart_table_tr">
+          <td class="th-padding flex">
+            <div class="cart_product_image_wrapper">
+              <img [src]="item.image" class="cart_product_image" [alt]="item.name" />
+            </div>
+            <p class="cart_item_name">{{ item.name }}</p>
+          </td>
+          <td class="th-padding">
+            <div class="cart_item_quantity">
+              <button class="btn-cart" type="button" (click)="onProductQuantityDecrease(item.id, item.quantity)">-</button>
+              <p>{{ item.quantity }}</p>
+              <button class="btn-cart" type="button" (click)="onProductQuantityIncrease(item.id, item.quantity)">+</button>
+            </div>
+          </td>
+          <td class="th-padding text-style">{{ item.price | currency: 'EUR' }}</td>
+          <td class="th-padding text-style">{{ calculateTotal(item.price, item.quantity) | currency: 'EUR' }}</td>
+          <td class="th-padding">
+            <button class="btn-remove" (click)="removeItem(item.id)">Remove</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

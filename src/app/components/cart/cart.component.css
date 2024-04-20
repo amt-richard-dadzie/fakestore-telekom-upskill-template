@@ -1,0 +1,19 @@
+.cart_image {
+  position: relative;
+}
+.cart_item {
+  position: absolute;
+  top: 33px;
+  right: 117px;
+  background-color: #ec5a5a;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart_item span {
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,13 @@
+<div>
+  <img
+    src="../../../assets/cart.svg"
+    width="40px"
+    alt="cart-icon"
+    class="cart_image"
+  />
+  <a [routerLink]="['/checkout']">
+    <div class="cart_item">
+      <span>{{ cartItems() }}</span>
+    </div>
+  </a>
+</div>
