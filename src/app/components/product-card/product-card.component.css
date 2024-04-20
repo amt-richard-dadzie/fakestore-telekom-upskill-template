@@ -1,0 +1,31 @@
+.product_card {
+  height: 400px;
+  background-color: rgb(221, 221, 221);
+  cursor: pointer;
+  border-radius: 10px;
+}
+.link {
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.product_text {
+  padding-inline: 1em;
+  padding-top: 0.3em;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.price_bold {
+  font-weight: 600;
+}
+.product_image_container {
+  width: 100%;
+  height: 80%;
+}
+
+.product_image_container img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
