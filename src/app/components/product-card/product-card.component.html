@@ -1,0 +1,15 @@
+<div class="product_card">
+  <a [routerLink]="['/product', product.id]" class="link">
+    <div class="product_image_container">
+      <img [src]="product.image" alt="" />
+    </div>
+    <div class="product_text">
+      <p>
+        {{ product.title | slice : 0 : 30
+        }}{{ product.title.length > 30 ? "..." : "" }}
+      </p>
+      <p class="price_bold">{{ product.price | currency : "EUR" }}</p>
+      <p>{{ product.category | titlecase }}</p>
+    </div>
+  </a>
+</div>
