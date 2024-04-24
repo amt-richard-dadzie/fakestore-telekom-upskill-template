@@ -27,6 +27,11 @@ main {
   margin-bottom: 1em;
   text-align: center;
 }
+
+.input-container p {
+  color: red;
+  text-align: center;
+}
 .input_field {
   padding: 1.3em 0.5em;
   outline: none;

@@ -2,6 +2,7 @@
   <div class="right-background">Hello</div>
   <div class="input-container">
     <h1>Log in to your account</h1>
+    <p *ngIf="errorMessage">{{errorMessage}}</p>
     <form class="content" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <app-input-field label="Username">
         <input
