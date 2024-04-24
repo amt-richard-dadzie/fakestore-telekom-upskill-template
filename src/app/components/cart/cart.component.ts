@@ -18,7 +18,6 @@ export class CartComponent {
     const items = localStorage.getItem('cart');
     if (items) {
       const existingCartItems: Cart = JSON.parse(items);
-      console.log(existingCartItems);
       return existingCartItems.items.length;
     }
     return this.cartService.cart.items.length;
