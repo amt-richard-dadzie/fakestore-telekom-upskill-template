@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { tap } from 'rxjs';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +11,7 @@ export class AuthService {
 
   public login(credentials: { username: string; password: string }) {
     return this.http
-      .post<{token: string}>('https://fakestoreapi.com/auth/login', credentials)
+      .post<{token: string}>(`${environment.apiUrl}/auth/login`, credentials)
       .pipe(
         tap((res) => {
           this.storeToken(res.token);

@@ -52,18 +52,18 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
 
-  public updatedCartItemQuantity(productId: number, quantity: number) {
+  public updatedCartItemQuantity(productId: number, newQuantity: number) {
     const productToUpdate = this.cart.items.find(
       (product) => product.id === productId
     );
 
     if (productToUpdate) {
-      const changeInQuantity = quantity - productToUpdate.quantity;
+      const changeInQuantity = newQuantity - productToUpdate.quantity;
 
       this.cart.totalQuantity += changeInQuantity;
       this.cart.totalPrice += changeInQuantity * productToUpdate.price;
 
-      productToUpdate.quantity = quantity;
+      productToUpdate.quantity = newQuantity;
     }
     localStorage.setItem('cart', JSON.stringify(this.cart));
   }
