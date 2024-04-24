@@ -36,6 +36,7 @@ export class HomeComponent {
   public logOut() {
     this.authService.logOut();
     this.cartService.clearCart();
+    this.searchService.setSearchValue('');
     this.router.navigate(['login']);
   }
 }
