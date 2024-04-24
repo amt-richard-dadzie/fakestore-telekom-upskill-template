@@ -98,3 +98,10 @@ thead {
   font-weight: 600;
   color: #202020;
 }
+.totalprice {
+  color: #1e1e1e;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  border-top: 1px solid #1e1e1e;
+}
