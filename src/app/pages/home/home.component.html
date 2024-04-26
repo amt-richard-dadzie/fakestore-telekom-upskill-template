@@ -5,6 +5,9 @@
       placeholder="Search for Product"
       (keyup)="onSearchInput($event)"
     />
+    <nav>
+      <a [routerLink]="['/']">Home</a>
+    </nav>
     <div class="cart_flex">
       <app-cart></app-cart>
       <div

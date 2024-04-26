@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { map, Observable, tap } from 'rxjs';
 import { Product } from '../../types/product';
+import { environment } from 'src/environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +13,7 @@ export class ProductService {
   private http: HttpClient = inject(HttpClient);
 
   public fetchAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('https://fakestoreapi.com/products').pipe(
+    return this.http.get<Product[]>(`${environment.apiUrl}/products`).pipe(
       tap((products) => {
         this.storeProducts = products;
       })
@@ -21,7 +22,7 @@ export class ProductService {
 
   public fetchProduct(productId: number): Observable<Product> {
     return this.http.get<Product>(
-      `https://fakestoreapi.com/products/${productId}`
+      `${environment.apiUrl}/products/${productId}`
     );
   }
 
